@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+    <!-- <h1>Login</h1> -->
+  
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+<div class="jumbotron centered"></div> 
+<div class="container">
+    <h3 class="assclass">Upcoming Tests</h3>
+    <ul>
+    <%posts.forEach(function(post){%>
+        <li><h4><%= (post.testbody)%><h4></li> 
+         <% });%>
+        </ul>
+</div>

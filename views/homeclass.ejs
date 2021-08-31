@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+
+  <div class="jumbotron text-center">
+    <div class="container">
+      <!-- <i class="fas fa-key fa-6x"></i> -->
+      <h1 class="display-3"></h1>
+      <h2 class="subheadhome">Subjects</h2>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false">
+          Mathematics
+        </button>
+        <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Hindi
+        </button>
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          English
+        </button>
+        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Science
+        </button>
+        <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Drawing
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/assignment">Assignments</a></li>
+          <li><a class="dropdown-item" href="/tests">Tests</a></li>
+          <li><a class="dropdown-item" href="/calendar">Calendar</a></li>
+          
+        </ul>
+      </div>
+
+    </div>
+    <!-- <% userWithsecrets.forEach(function(user){%>
+      <p class="secret-text"> <%= user.secret %> </p>
+   <% })%>
+     -->
+    <hr>
+<div>
+  To Join Class: <a href="https://meet.google.com/skb-rgtm-bbt">cilck here</a> 
+</div>
+    <a class="btn btn-light btn-lg bottom" href="/logout" role="button">Log Out</a>
+    <!-- <a class="btn btn-dark btn-lg" href="/submit" role="button">Submit a Secret</a> -->
+  </div>
+  </div>
+
+  <%- include('partials/footer') %>
