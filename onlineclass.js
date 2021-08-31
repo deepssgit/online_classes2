@@ -43,8 +43,7 @@
    app.use(passport.session());
  
  // console.log(md5("message"));
- mongoose.connect("mongodb+srv://admin-deepu:deepubhaiya@cluster0.ri61b.mongodb.net/userdataDB",{useNewUrlParser:true},{useUnifiedTopology: true});
- mongoose.set("useCreateIndex",true);
+ mongoose.connect("mongodb+srv://admin-deepu:deepubhaiya@cluster0.ri61b.mongodb.net/userdataDB",{useNewUrlParser: true},{useUnifiedTopology: true})
  
  const userSchema = new mongoose.Schema({
      username:String,
@@ -84,7 +83,7 @@
  passport.use(new GoogleStrategy({
      clientID: process.env.CLIENT_ID,
      clientSecret: process.env.CLIENT_SECRET,
-     callbackURL: "http://localhost:3000/auth/google/secrets",
+     callbackURL: "https://serene-forest-00806.herokuapp.com/auth/google/secrets",
      userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
    },
    function(accessToken, refreshToken, profile, cb) {
@@ -482,13 +481,13 @@ res.redirect("/tests")
      });
    });
 
-  //  let port = process.env.PORT;
-  //  if(port == null || port == ""){
-  //      port ==3000
-  //  } 
+   let port = process.env.PORT;
+   if(port == null || port == ""){
+       port ==3000
+   } 
  
  
-app.listen(process.env.PORT||3000, function () {
+app.listen(3000, function () {
     console.log("server has started successfully");
 })
  
